@@ -1,0 +1,21 @@
+services:
+  proxy:
+    image: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro,z
+    ports:
+      - 8080:80
+    networks:
+      - local
+    depends_on:
+      - flask-app
+    entrypoint: ["nginx", "-g", "daemon off;"]
+
+  flask-app:
+    image: localhost/flask-app:latest
+    networks:
+      - local
+networks:
+  local:
+    internal: true
+    driver: ipvlan
