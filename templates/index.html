@@ -29,7 +29,7 @@
       background-image: url('{{ url_for("static", filename="img/mybandimage.jpg") }}');
       background-size: cover;
       background-position: center;
-      height: 400px;
+      height: 800px;
       color: rgb(255, 255, 255);
       text-align: center;
       display: flex;
@@ -50,8 +50,20 @@
       border-radius: 10px;    /* Optional: Adds rounded corners */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for a 3D effect */
     }
+    .gallery {
+      position: relative;
+      background-color: lightslategray;
+      /* display: flex;
+      flex-wrap: wrap; */
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 2px solid #333; /* Add a solid border */
+      padding: 20px 0;
+    }
     .gallery img {
-      width: 100%;
+      width: 800px;
       height: auto;
       margin-bottom: 15px;
     }
@@ -68,39 +80,38 @@
   <div class="container middle-content">
     <div class="d-flex align-content-sm-center border border-primary">
       <div class="col-md-12">
-        <h2>About Us</h2>
-        <p>We are a passionate music group that blends genres from rock to jazz. Our mission is to create music that resonates with every listener. Our band started with a shared love for music and a dream to make a difference.</p>
-        <p>Stay tuned for upcoming performances, albums, and more!</p>
+        <h2>Hey there!</h2>
+        <p>We are a passionate music group that blends genres from rock to jazz. Our mission is to cover songs that resonate with everyone in on a party or a pub. 
+           To get people up on their feet and dance! We also have a more relaxing setlist for calmer events!
+           We are here to make your event unforgettable. Wheather it's a wedding, private party or special celebration. 
+           We are based in Gothenburg, Sweden!</p>
       </div>
       <div class="col-md-12">
-        <h2>Get a taste</h2>
-        <p>You can find our youtube here: </p>
-        <p>There are also some videos up on our facebook: </p>
+        <h2>What We Play</h2>
+        <p>From relaxing crowd-pleasing classics to rock-your-shoes-off hits, our setlists are flexible and has it all. Love a specific tune? Let us know!</p>
+        <h2>Get a Taste</h2>
+        <a href="https://youtube.com/@doctorsdrummers-v9f?si=CqoLsDE5ShiCCPgE" target="_blank" style="color: blue">Check out our youtube!</a>
+        <p></p>
+        <a href="https://facebook.com/profile.php?id=61568214749362" target="_blank" style="color: blue">Check out our facebook</a>
       </div>
       <div class="col-md-12">
         <h2>Contact Us</h2>
-        <p>You can contact us via:</p>
-        <p>Email: </p>
-        <p>Facebook: </p>
+        <p>You can find our contact info on facebook:</p>
+        <a href="https://facebook.com/profile.php?id=61568214749362" target="_blank" style="color: blue">Facebook</a>
       </div>
     </div>
   </div>
-
+  <p></p>
   <!-- Gallery Section -->
-  <div class="container gallery">
+  <div class="gallery">
     <h2>Photo Gallery</h2>
     <div class="row">
       <!-- Images in the img folder -->
-      <div class="col-md-4">
-        <img src="img/photo1.jpg" alt="Band Image 1">
+      <div class="gallery img">
+        {% for image in images %}
+          <img src="{{ url_for('static', filename=image) }}" alt="Gallery Image">
+        {% endfor %}
       </div>
-      <div class="col-md-4">
-        <img src="img/photo2.jpg" alt="Band Image 2">
-      </div>
-      <div class="col-md-4">
-        <img src="img/photo3.jpg" alt="Band Image 3">
-      </div>
-      <!-- Add more images here as needed -->
     </div>
   </div>
 
