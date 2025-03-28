@@ -1,0 +1,67 @@
+/*!
+ * Bootstrap v3.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 1400px; /* Restrict the width to center the text more */
+  margin: 0 auto;  /* Centers the element horizontally */
+  padding-left: 10%; /* Slightly shift it towards the center */
+  padding-right: 10%; /* Keep spacing equal on both sides */
+  text-align: left; /* Keep text aligned to the left */
+  background-color: #333;
+  color: aliceblue;
+  border: 2px solid #333; /* Add a solid border */
+  border-radius: 10px;    /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for a 3D effect */
+  font-size: 1.5rem; /* Increase the text size */
+}
+.body {
+  background-color: #1e1e1e; /* Set a darker grey background */
+}
+.header {
+  background-image: url("../img/background_1.jpg");
+  background-color: #333;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  color: aliceblue;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid #1e1e1e; /* Add a solid border */
+  border-radius: 10px;    /* Optional: Adds rounded corners */
+}
+.header h1 {
+  font-size: 7rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.gallery {
+  position: relative;
+  color: aliceblue;
+  box-shadow: 0 4px 8px rgba(50, 49, 49, 0.1); /* Optional: Adds shadow for a 3D effect */
+  /* display: flex;
+  flex-wrap: wrap; */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #333; /* Add a solid border */
+  padding: 20px 0;
+  background: linear-gradient(to bottom, black, purple, rgb(172, 40, 62));
+}
+.gallery img {
+  width: 800px;
+  height: auto;
+  margin-bottom: 15px;
+}
+

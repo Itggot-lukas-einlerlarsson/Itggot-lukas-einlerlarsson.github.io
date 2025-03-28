@@ -1,116 +1,87 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Flask Intro</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-    <div class="container">
-      <h1>Welcome to Flask!</h2>
-      <br>
-      <p>Click <a href="/">here</a> to go home.</p>
-    </div>
-  </body>
-</html> -->
 
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Band</title>
+  <title>Doctors & Drummers</title>
   <!-- Link to Bootstrap CSS -->
-  <link href="static/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles (optional) -->
-  <style>
-    .header {
-      background-image: url('{{ url_for("static", filename="img/mybandimage.jpg") }}');
-      background-size: cover;
-      background-position: center;
-      height: 800px;
-      color: rgb(255, 255, 255);
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      border: 2px solid #333; /* Add a solid border */
-      border-radius: 10px;    /* Optional: Adds rounded corners */
-    }
-    .header h1 {
-      font-size: 7rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    .middle-content {
-      padding: 20px 0;
-      background-color: #f4f4f4;
-      border: 2px solid #333; /* Add a solid border */
-      border-radius: 10px;    /* Optional: Adds rounded corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for a 3D effect */
-    }
-    .gallery {
-      position: relative;
-      background-color: lightslategray;
-      /* display: flex;
-      flex-wrap: wrap; */
-      gap: 10px;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border: 2px solid #333; /* Add a solid border */
-      padding: 20px 0;
-    }
-    .gallery img {
-      width: 800px;
-      height: auto;
-      margin-bottom: 15px;
-    }
-  </style>
+  <link href="static/css/main.css" rel="stylesheet">
+  <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
 
   <!-- Header Section -->
   <header class="header">
-    <h1>Doctors and Drummers</h1>
+    <h1>Doctors & Drummers</h1>
   </header>
   <h3></h3>
   <!-- Middle Content Section -->
-  <div class="container middle-content">
+  <div class="container">
     <div class="d-flex align-content-sm-center border border-primary">
       <div class="col-md-12">
-        <h2>Hey there!</h2>
-        <p>We are a passionate music group that blends genres from rock to jazz. Our mission is to cover songs that resonate with everyone in on a party or a pub. 
-           To get people up on their feet and dance! We also have a more relaxing setlist for calmer events.
-           We are here to make your event unforgettable. Wheather it's a wedding, private party or special celebration. 
-           We are based in Gothenburg, Sweden!</p>
+        <h2>Tjenamors! 😎</h2>
+        <p>Vi är en passionerad musikgrupp som blandar genrer från rock till jazz. Vårt uppdrag är att spela covers som engagerar alla på en fest eller en pub. 
+          Att få folk att resa sig upp och dansa! Vi har också en mer avslappnad låtlista för lugnare tillställningar.
+          Vi är här för att göra ditt event oförglömligt! Oavsett om det är ett bröllop, privat fest eller en speciell högtid.
+          Vi håller till i Göteborg.</p>
       </div>
       <div class="col-md-12">
-        <h2>What We Play</h2>
-        <p>From relaxing crowd-pleasing classics to rock-your-shoes-off hits, our setlists are flexible and has it all. Love a specific tune? Let us know!</p>
-        <h2>Get a Taste</h2>
-        <a href="https://youtube.com/@doctorsdrummers-v9f?si=CqoLsDE5ShiCCPgE" target="_blank" style="color: blue">Check out our youtube!</a>
+        <h2>Vad vi erbjuder 🤔🥳</h2>
+        <p>Från avslappnade publikfavoriter till låtar som får dig att rocka loss, våra låtlistor är flexibla och har allt. Älskar du en specifik låt? Hör av dig till oss!</p>
+      </div>
+      <div class="col-md-12">
+        <h2>Få ett smakprov!🎵</h2>
+        <a href="https://youtube.com/@doctorsdrummers-v9f?si=CqoLsDE5ShiCCPgE" target="_blank" style="color: lightblue">Kolla in vår Youtube!</a>
         <p></p>
-        <a href="https://facebook.com/profile.php?id=61568214749362" target="_blank" style="color: blue">Check out our facebook</a>
+        <a href="https://facebook.com/profile.php?id=61568214749362" target="_blank" style="color: lightblue">Kolla in vår Facebook!</a>
       </div>
       <div class="col-md-12">
-        <h2>Contact Us</h2>
-        <p>You can find our contact info on facebook:</p>
-        <a href="https://facebook.com/profile.php?id=61568214749362" target="_blank" style="color: blue">Facebook</a>
+        <h2>Kommande evenemang 🎉</h2>
+        <img src="static/img/event_1.jpg" alt="Gallery Image">
+      </div>
+      <div class="col-md-12">
+        <h2>Kontakta oss ☎️📮</h2>
+        <p>Du kan hitta våra kontaktuppgifter på:</p>
+        <a href="https://facebook.com/profile.php?id=61568214749362" target="_blank" style="color: lightblue">Facebook</a>
+        <p></p>
       </div>
     </div>
   </div>
   <p></p>
   <!-- Gallery Section -->
   <div class="gallery">
-    <h2>Photo Gallery</h2>
+    <h1>Photo Gallery</h1>
     <div class="row">
       <!-- Images in the img folder -->
       <div class="gallery img">
-        {% for image in images %}
-          <img src="{{ url_for('static', filename=image) }}" alt="Gallery Image">
-        {% endfor %}
+          <img src="static/img/camera_1_1.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_2.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_3.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_4.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_5.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_6.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_7.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_8.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_9.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_10.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_11.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_12.jpg" alt="Gallery Image">
+          <img src="static/img/camera_1_13.jpg" alt="Gallery Image">
+          <img src="static/img/camera_2_1.jpg" alt="Gallery Image">
+          <img src="static/img/camera_2_2.jpg" alt="Gallery Image">
+          <img src="static/img/camera_2_3.jpg" alt="Gallery Image">
+          <img src="static/img/camera_2_4.jpg" alt="Gallery Image">
+          <img src="static/img/camera_2_5.jpg" alt="Gallery Image">
+          <img src="static/img/camera_2_6.jpg" alt="Gallery Image">
+          <img src="static/img/camera_2_7.jpg" alt="Gallery Image">
+          <img src="static/img/camera_2_8.jpg" alt="Gallery Image">
+          <img src="static/img/camera_2_9.jpg" alt="Gallery Image">
+          <img src="static/img/camera_2_10.jpg" alt="Gallery Image">
+          <img src="static/img/background_2.jpg" alt="Gallery Image">
       </div>
     </div>
   </div>
