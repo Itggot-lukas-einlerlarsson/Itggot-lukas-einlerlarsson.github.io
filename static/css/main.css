@@ -1,17 +1,12 @@
-/*!
- * Bootstrap v3.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 .container {
+  max-width: 95%; /* Take up full width on small devices */
   font-family: Arial, sans-serif;
-  max-width: 1400px; /* Restrict the width to center the text more */
+  /*max-width: 1400px; /* Restrict the width to center the text more */
   margin: 0 auto;  /* Centers the element horizontally */
   padding-left: 10%; /* Slightly shift it towards the center */
   padding-right: 10%; /* Keep spacing equal on both sides */
@@ -27,41 +22,55 @@ html {
   background-color: #1e1e1e; /* Set a darker grey background */
 }
 .header {
+  background-size: 800px;
+  font-size: 90%;
+  height: 800px;
+  background-size: 100%; /* Take up full width on small devices */
   background-image: url("../img/background_1.jpg");
   background-color: #333;
   background-size: cover;
   background-position: center;
-  height: 800px;
+  /* height: auto; */
   color: aliceblue;
   text-align: center;
-  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   border: 2px solid #1e1e1e; /* Add a solid border */
   border-radius: 10px;    /* Optional: Adds rounded corners */
 }
+
+@media screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 1rem;
+    background-size: 400px;
+  }
+}
+
+
 .header h1 {
-  font-size: 7rem;
+  font-size: 6rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .gallery {
   position: relative;
   color: aliceblue;
-  box-shadow: 0 4px 8px rgba(50, 49, 49, 0.1); /* Optional: Adds shadow for a 3D effect */
-  /* display: flex;
-  flex-wrap: wrap; */
+  box-shadow: 0 4px 8px rgba(50, 49, 49, 0.1); 
   gap: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 2px solid #333; /* Add a solid border */
   padding: 20px 0;
   background: linear-gradient(to bottom, black, purple, rgb(172, 40, 62));
 }
 .gallery img {
-  width: 800px;
+  max-width: 40%; 
   height: auto;
   margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
+.gallery img.zoomed {
+  transform: scale(1.5); /* Zoom the image to 150% */
+}
