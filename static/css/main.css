@@ -22,35 +22,53 @@ html {
   background-color: #1e1e1e; /* Set a darker grey background */
 }
 .header {
-  background-size: 800px;
-  font-size: 90%;
-  height: 800px;
-  background-size: 100%; /* Take up full width on small devices */
   background-image: url("../img/background_1.jpg");
-  background-color: #333;
   background-size: cover;
   background-position: center;
-  /* height: auto; */
-  color: aliceblue;
   text-align: center;
+  color: aliceblue;
+  height: 800px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  border: 2px solid #1e1e1e; /* Add a solid border */
+  border: 2px solid #333; /* Add a solid border */
   border-radius: 10px;    /* Optional: Adds rounded corners */
 }
 
+.header h1 {
+  font-size: 6rem; /* Default font size for large screens */
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+}
+
+/* Media Query for Small Screens (Below 768px) */
 @media screen and (max-width: 768px) {
+  .header {
+    height: 400px; /* Reduce height for smaller devices */
+  }
+
   .header h1 {
-    font-size: 1rem;
-    background-size: 400px;
+    font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+
+  .container {
+    font-size: 1.1rem;
   }
 }
 
+/* Media Query for Extra Small Screens (Below 480px) */
+@media screen and (max-width: 480px) {
+  .header {
+    height: 220px; /* Reduce height for smaller devices */
+  }
 
-.header h1 {
-  font-size: 6rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  .header h1 {
+    font-size: 2rem; /* Further reduce font size for very small devices */
+  }
+
+  .container {
+    font-size: 1.0rem;
+  }
 }
 .gallery {
   position: relative;
