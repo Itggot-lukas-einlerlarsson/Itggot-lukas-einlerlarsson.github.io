@@ -1,0 +1,12 @@
+# Feature requests
+- snabb presentation, smakprov
+- Meny med lite olika sidor för:
+    - hem
+    - boka
+    - om
+    - fotogalleri
+
+- vi kör kanske inte allting - bred repetoar iaf'
+
+- embedda videos direkt på hemsidan
+

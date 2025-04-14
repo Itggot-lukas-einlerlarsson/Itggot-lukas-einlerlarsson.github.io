@@ -2,6 +2,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background: linear-gradient(to bottom, black, purple, rgb(172, 40, 62));
 }
 .container {
   max-width: 95%; /* Take up full width on small devices */
@@ -11,55 +12,90 @@ html {
   padding-left: 10%; /* Slightly shift it towards the center */
   padding-right: 10%; /* Keep spacing equal on both sides */
   text-align: left; /* Keep text aligned to the left */
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: #1e1e1e;
   color: aliceblue;
   border: 2px solid #333; /* Add a solid border */
-  border-radius: 10px;    /* Optional: Adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for a 3D effect */
+   /* Optional: Adds shadow for a 3D effect */
   font-size: 1.5rem; /* Increase the text size */
 }
 .body {
   background-color: #1e1e1e; /* Set a darker grey background */
 }
 .header {
-  background-image: url("../img/background_1.jpg");
+  width: 60%;                 
+  height: 600px;
+  text-align: center;           
+  border: 2px solid #333;       
+  border-radius: 10px;          
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.header-image {
+  background-image: url("../img/background_3.jpg");
   background-size: cover;
   background-position: center;
-  text-align: center;
-  color: aliceblue;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #333; /* Add a solid border */
-  border-radius: 10px;    /* Optional: Adds rounded corners */
 }
 
 .header h1 {
+  color: aliceblue;
+  padding-top: 24%;
   font-size: 6rem; /* Default font size for large screens */
   margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+}
+
+iframe {
+  width: 100%; /* Make it responsive */
+  height: 500px; /* Fixed height */
+  border: none; /* Remove default border */
+}
+
+a {
+  color: rgb(184, 156, 174); /* Changes the link text color to white */
+  text-decoration: none; /* Removes the default underline */
+}
+
+a:hover {
+  color: #ddd; /* Slightly dim color on hover for better visibility */
 }
 
 /* Media Query for Small Screens (Below 768px) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 933px) {
   .header {
-    height: 400px; /* Reduce height for smaller devices */
+    width: 90%;                 
+    height: 300px;
+  }
+
+  .menu {
+    width: 96% !important;
   }
 
   .header h1 {
+    padding-top: 24%;
     font-size: 3rem; /* Adjust font size for smaller screens */
   }
 
   .container {
     font-size: 1.1rem;
   }
+
+  .gallery img {
+    width: 80% !important;
+  }
+
 }
 
 /* Media Query for Extra Small Screens (Below 480px) */
 @media screen and (max-width: 480px) {
   .header {
-    height: 220px; /* Reduce height for smaller devices */
+    width: 90%;                 
+    height: 150px;
+  }
+
+  .menu {
+    width: 99% !important;
   }
 
   .header h1 {
@@ -69,17 +105,45 @@ html {
   .container {
     font-size: 1.0rem;
   }
+
+  .menu-btn {
+    font-size: 14px !important;
+    padding: 3% !important;
+  }
+
+  .gallery img {
+    width: 80% !important;
+  }
 }
+
 .gallery {
+  /* display: contents;
+  display: flow-root; */
+  display: inline;
+  gap: 10px;
+  place-items: center; /* Centers images properly */
+}
+
+.gallery img {
+  width: 50%; /* Fill entire grid cell */
+  height: auto;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, black, purple, rgb(172, 40, 62));
+  cursor: pointer;
+}
+
+/* Mobile View: Only 1 image per row */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr); /* 1 image per row */
+  }
+}
+/* .gallery {
+  box-shadow: 0 4px 8px rgba(50, 49, 49, 0.1); 
   position: relative;
   color: aliceblue;
-  box-shadow: 0 4px 8px rgba(50, 49, 49, 0.1); 
   gap: 10px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   padding: 20px 0;
-  background: linear-gradient(to bottom, black, purple, rgb(172, 40, 62));
 }
 .gallery img {
   max-width: 40%; 
@@ -87,8 +151,62 @@ html {
   margin-bottom: 15px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+} */
+
+
+.menu {
+  place-self: center;
+  width: 62%;
+  background-color: purple;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 10px;    /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #333;
 }
 
-.gallery img.zoomed {
-  transform: scale(1.5); /* Zoom the image to 150% */
+.menu-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  border-radius: 5px;
+  padding: 3%;
+}
+
+.menu-btn:hover {
+  background-color: #444;
+}
+
+
+.contact-button {
+  display: inline-block; /* Ensures it behaves like a button */
+  padding: 10px 20px; /* Adds space inside */
+  background-color: #000000; /* Nice blue background */
+  color: white; /* White text */
+  text-decoration: none; /* Removes underline */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Makes text stand out */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.contact-button:hover {
+  background-color: #3d4144; /* Darker blue on hover */
+}
+
+footer {
+  width: 60%;                 
+  text-align: left;                 
+  padding: 20px;
+  margin: 0 auto;
+  font-size: 1.5rem;
 }
