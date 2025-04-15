@@ -5,7 +5,7 @@ html {
   background: linear-gradient(to bottom, black, purple, rgb(172, 40, 62));
 }
 .container {
-  max-width: 95%; /* Take up full width on small devices */
+  max-width: 75%; /* Take up full width on small devices */
   font-family: Arial, sans-serif;
   /*max-width: 1400px; /* Restrict the width to center the text more */
   margin: 0 auto;  /* Centers the element horizontally */
@@ -23,8 +23,8 @@ html {
   background-color: #1e1e1e; /* Set a darker grey background */
 }
 .header {
-  width: 60%;                 
-  height: 600px;
+  width: 55%;
+  height: 450px;
   text-align: center;           
   border: 2px solid #333;       
   border-radius: 10px;          
@@ -61,8 +61,51 @@ a:hover {
   color: #ddd; /* Slightly dim color on hover for better visibility */
 }
 
+@media screen and (max-width: 1400px) {
+  .header {     
+    width: 55%!important;           
+    height: 350px;
+  }
+
+  .menu {
+    width: 96% !important;
+  }
+
+  .gallery img {
+    width: 50% !important;
+  }
+}
+
+
 /* Media Query for Small Screens (Below 768px) */
 @media screen and (max-width: 933px) {
+  .header {
+    width: 90%;                 
+    height: 300px;
+  }
+
+  .menu {
+    width: 96% !important;
+  }
+
+  .header h1 {
+    padding-top: 24%;
+    font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+
+  .container {
+    font-size: 1.1rem;
+  }
+
+  .gallery img {
+    width: 80% !important;
+  }
+
+}
+
+
+/* Media Query for Small Screens (Below 768px) */
+@media screen and (max-width: 1440px) {
   .header {
     width: 90%;                 
     height: 300px;
@@ -156,7 +199,7 @@ a:hover {
 
 .menu {
   place-self: center;
-  width: 62%;
+  width: 58%;
   background-color: purple;
   gap: 10px;
   justify-content: center;
