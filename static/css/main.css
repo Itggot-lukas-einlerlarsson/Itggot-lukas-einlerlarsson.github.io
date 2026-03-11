@@ -1,48 +1,40 @@
-.coverband {
-    background-color: black;
-    color: turquoise;
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
+.container {
+  background: linear-gradient(to bottom, #000000, #1a1a1a);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
 }
 
-.header {
-    background-color: grey;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.nav-bar {
-    display: flex;
-    justify-content: space-around;
-    background-color: black;
-    padding: 10px;
-}
-
-.nav-item {
-    color: turquoise;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.nav-item:hover {
-    color: red;
-}
-
-.footer {
-    background-color: grey;
-    text-align: center;
-    padding: 10px;
-    color: white;
+h1, h2, h3, h4, h5, h6 {
+  color: #00bcd4;
 }
 
 .button {
-    background-color: turquoise;
-    color: black;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
+  background-color: #f44336; /* Red for call-to-action buttons */
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: red;
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+a {
+  color: #00bcd4; /* Turquoise for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0097a7; /* Darker turquoise on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
 }
