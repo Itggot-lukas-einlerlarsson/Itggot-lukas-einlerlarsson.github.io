@@ -2,7 +2,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background: linear-gradient(to bottom, black, rgb(6, 135, 174), turquoise);
+  background: linear-gradient(to bottom, black, rgb(4, 68, 87),  rgb(25, 106, 98));
 }
 .container {
   max-width: 75%; /* Take up full width on small devices */
@@ -172,7 +172,7 @@ a:hover {
   width: 50%; /* Fill entire grid cell */
   height: auto;
   border-radius: 5px;
-  background: linear-gradient(to bottom, black, rgb(6, 135, 174), turquoise);
+  background: linear-gradient(to bottom, black, rgb(4, 68, 87),  rgb(25, 106, 98));
   cursor: pointer;
 }
 
@@ -201,7 +201,7 @@ a:hover {
 .menu {
   place-self: center;
   width: 58%;
-  background-color: turquoise;
+  background-color: rgb(25, 106, 98); 
   gap: 10px;
   justify-content: center;
   align-items: center;
