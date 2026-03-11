@@ -2,7 +2,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background: linear-gradient(to bottom, black, rgb(6, 135, 174), turquoise);
+  background: linear-gradient(to bottom, black, purple, rgb(172, 40, 62));
 }
 .container {
   max-width: 75%; /* Take up full width on small devices */
@@ -33,7 +33,7 @@ html {
 }
 
 .header-image {
-  background-image: url("../img/doctorsanddrummers_logo.jpg");
+  background-image: url("../img/background_3.jpg");
   background-size: cover;
   background-position: center;
   margin-top: 20px;
@@ -172,7 +172,7 @@ a:hover {
   width: 50%; /* Fill entire grid cell */
   height: auto;
   border-radius: 5px;
-  background: linear-gradient(to bottom, black, rgb(6, 135, 174), turquoise);
+  background: linear-gradient(to bottom, black, purple, rgb(172, 40, 62));
   cursor: pointer;
 }
 
@@ -201,7 +201,7 @@ a:hover {
 .menu {
   place-self: center;
   width: 58%;
-  background-color: turquoise;
+  background-color: purple;
   gap: 10px;
   justify-content: center;
   align-items: center;
