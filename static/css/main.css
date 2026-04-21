@@ -32,6 +32,10 @@ html {
   margin: 0 auto;
 }
 
+.col-md-12 h4 {
+  color:  rgb(45, 172, 194); 
+}
+
 .header-image {
   background-image: url("../img/doctorsanddrummers_logo.jpg");
   background-size: cover;
